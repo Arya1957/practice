@@ -1,31 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-*::before, *::after {
-  box-sizing: border-box; }
-
-html, body {
-  height: 100%; }
-
-.layout {
-  height: 100%;
-  display: flex;
-  flex-direction: column; }
-
-.pikachu-wrapper {
-  flex: 1;
-  background: #FFE600;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .pikachu-wrapper .pikachu {
-    width: 100%;
-    height: 180px;
-    margin: 0 auto;
-    position: relative; }
-
 .pikachu .nose {
   position: absolute;
   top: 28px;
