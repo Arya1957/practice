@@ -132,7 +132,10 @@ let code = ` /* 鼻子 */
 let duration = 30;
 
 $('.actions').on('click', 'button', function (e) {
-    $button = $(e.currentTarget);
+    $button = $(e.currentTarget); // 在事件冒泡过程中的当前DOM元素
+  //  $button = $(e.target); // event.target 触发事件的DOM元素
+    console.log(e.target);
+
     speed = $button.attr('data-speed');
     $button.addClass('active')
         .siblings('.active').removeClass('active');
@@ -151,7 +154,7 @@ $('.actions').on('click', 'button', function (e) {
 });
 
 
-function writeCode(prefix, code, fn) {
+function writeCode( code, fn) {
     let wrapper = document.querySelector('#code');
     let styleTag = document.querySelector('#styleTag');
     let n = 0;
@@ -164,11 +167,11 @@ function writeCode(prefix, code, fn) {
         if (n < code.length) {
             id = setTimeout(run, duration)
         } else {
-            fn && fn.call() //如果你给我传了回调那么我就再调一下回调。
+            fn && fn.call() //如果传了回调那么我就再调一下回调。
         }
     }, duration)
 }
 
 
-writeCode('', code);
+writeCode(code);
 
