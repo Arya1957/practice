@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>形成BFC</title>
+    <style>
+        .parent {
+            border: 2px solid;
+            min-height: 10px;
+            /* 父容器形成块级格式化上下文，清除浮动 */
+            /*  第一种情况： 浮动  */
+            /* float: left; */
+            /*  第二种情况： 绝对定位  */
+            /* position: fixed; */
+            /*  position: absolute; */
+            /*  第三种情况： 非块盒的块容器 */
+            /*  display: inline-block;  */
+            /*  display: table-caption;  */
+            /*  display: table-cell; */
+            /*  display: inline-flex; */
+            /* 第四种情况： 弹性元素 */
+            /*  display: flex; */
+            /*  第五种情况： overflow 不为 visible  */
+            /* overflow: hidden; */
+            /*  overflow: auto; */
+            /*  overflow: scroll; */
+            /*  第六种情况： 网格元素 */
+            /* display: grid; */
+            /* display: inline-grid */
+            /* 第七种情况：display: flow-root; 触发BFC ，没有副作用，但是是个新属性，要注意浏览器兼容情况  */
+              display: flow-root;
+        }
+        .child {
+            background: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
 </head>
 <body>
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
 "> MDN  对BFC 的阐述</a>
+
+<div class="parent">
+    <div class="child"></div>
+</div>
+
 
 </body>
 </html>
