@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC 阻止父子外边距合并 </title>
+    <style>
+        body {
+        }
+        .parent {
+            background: red;
+            margin: 20px;
+            overflow: hidden;
+            /*display: flow-root;*/
+        }
+        .child {
+            margin: 10px;
+            background: #fff;
+        }
+        hr {
+            margin: 40px 0;
+
+        }
+
+        .wrapper {
+           border: 1px solid;
+
+        }
+
+        p {
+            height: 20px;
+            margin: 10px;
+            background: #ccc;
+        }
+        .wrapper>p{
+            overflow: hidden;
+        }
+
+        .test {
+            margin-top: 30px;
+            border: 1px solid red;
+        }
+
+        .ct {
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<blockquote>
+    在一个块格式化上下文中，盒在竖直方向一个接一个地放置，从包含块的顶部开始。两个兄弟盒之间的竖直距离由'margin'属性决定。同一个块格式化上下文中的相邻块级盒之间的竖直margin会合并。
+</blockquote>
+
+创建了BFC的元素和它的子元素外边距不会发生折叠
+<div class="parent">
+    <div class="child ">child</div>
+</div>
+
+<hr>
+<h3>BFC 阻止相邻元素外边距合并的实质仍旧是阻止父子外边距合并</h3>
+
+<div class="wrapper">
+    wrapper 里面的3 个p  元素都是 wrapper 的子元素，margin 都是 10px,不出所料，发生了合并 <br>
+    给每个加上 overflow: hidden， 触发BFC ，然而外边距依旧会折叠
+    <p> p </p>
+    <p> p </p>
+    <p>p </p>
+</div>
+
+<div class="test">
+
+    给其中一个 p 元素加一个容器元素，并让这个容器元素触发BFC ，这时可以看到，貌似这次外边距没有合并。 <br>
+    这实际上是因为 这个容器元素触发 BFC 后，她的子元素 p  的外边距不会和他合并,也就是不会到外面去, 也就没法和他前面一个P 元素的外边距合并了
+    <p>p</p>
+    <p>p</p>
+   <div class="ct" >
+       <p>p</p>
+   </div>
+</div>
+
+</body>
+</html>

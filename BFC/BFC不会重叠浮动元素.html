@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC- 不会重叠浮动元素 - 用 float + BFC 来做自适应的左右布局 </title>
+    <style>
+
+        .parent {
+            background: #ccc;
+
+        }
+
+        .gege {
+            width: 100px;
+            min-height: 600px;
+            border: 3px solid red;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .didi {
+            min-height: 600px;
+            border: 5px solid blue;
+           overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent">
+    BFC 不会重叠浮动元素 - 用 float + BFC 来做自适应的左右布局
+    <div class="gege"> float</div>
+    <div class="didi"> BFC</div>
+</div>
+
+</body>
+</html>
