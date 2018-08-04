@@ -1,6 +1,8 @@
 
 class Barrel {
     constructor(el, keyword,curPage,BaseHeight) {
+        console.log(keyword);
+
         this.el = document.querySelector(el);
         this.keyword = keyword || 'cat';
         this.curPage = curPage || 1;
@@ -120,7 +122,6 @@ class Barrel {
             // console.log('高度：' + figureNode.style.height, '宽度：' + figureNode.style.width);
             figureNode.appendChild(imgNode);
             this.el.appendChild(figureNode);
-
             lazyLoad( this.el.querySelectorAll('.lazyload')
         ) 
             // 将需要懒加载的列表传给 lazyload函数

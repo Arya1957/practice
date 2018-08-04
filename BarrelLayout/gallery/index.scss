@@ -6,8 +6,6 @@
 
 .layout {
   margin: 30px;
-  border: 1px solid #ccc;
-
   header {
     text-align: center;
 
@@ -18,11 +16,11 @@
 }
 
 #search {
-  height: 36px;
-  line-height: 36px;
+  height: 40px;
+  line-height: 40px;
   padding-left: 16px;
   min-width: 360px;
-  border: 1px solid #ccc;
+  border: 1px solid #dcdfe6;
   border-radius: 2px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 }

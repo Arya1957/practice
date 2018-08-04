@@ -8,7 +8,7 @@ function getKeyword() {
   // 等同于  if (event.key !== 'Enter') return;
   //  当enter 事件触发
   console.log(keyword);
-  return new Barrel('.layout>main', keyword, curPage, 300);
+ new Barrel('.layout>main', keyword, curPage, 200);
 }
 
 
