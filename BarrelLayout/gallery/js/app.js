@@ -1,4 +1,5 @@
 let searchInput = document.querySelector('#search');
+let imgCt = document.querySelector('.layout>main')
 searchInput.addEventListener('keyup',getKeyword)
 
 function getKeyword() {
@@ -7,8 +8,8 @@ function getKeyword() {
   if (event.keyCode !== 13) return;
   // 等同于  if (event.key !== 'Enter') return;
   //  当enter 事件触发
-  console.log(keyword);
- new Barrel('.layout>main', keyword, curPage, 200);
+  imgCt.innerHTML = ''; 
+ new Barrel(imgCt, keyword, curPage, 200);
 }
 
 

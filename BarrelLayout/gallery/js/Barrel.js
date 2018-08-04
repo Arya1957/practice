@@ -1,9 +1,7 @@
 
 class Barrel {
     constructor(el, keyword,curPage,BaseHeight) {
-        console.log(keyword);
-
-        this.el = document.querySelector(el);
+        this.el = el;
         this.keyword = keyword || 'cat';
         this.curPage = curPage || 1;
         this.BaseHeight = BaseHeight || 200;
@@ -36,9 +34,9 @@ class Barrel {
     }
 
    
-    getImg(keyword) {
+    getImg() {
         return new Promise((resolve, reject) => {
-            //  console.log(this);
+              console.log(this.keyword);
             let data = {
                 key: '9707187-ef5962554ce6e0f6e0d82c02c',
                 q: this.keyword ,
@@ -58,6 +56,7 @@ class Barrel {
             xhr.send();
             xhr.onload =  ()=> {
                 if ((xhr.status >= 200 || xhr.status < 300) || xhr.status === 304) {
+                    console.log('fetching')
                     let imgData = JSON.parse(xhr.response);
                     resolve(imgData);
                     this.imgUrls = imgData;
