@@ -55,14 +55,13 @@ class Barrel {
             xhr.open('GET', url, true);
             xhr.send();
             xhr.onload =  ()=> {
+                console.log('fetching')
                 if ((xhr.status >= 200 || xhr.status < 300) || xhr.status === 304) {
-                    console.log('fetching')
                     let imgData = JSON.parse(xhr.response);
                     resolve(imgData);
-                    this.imgUrls = imgData;
+                    this.imgUrls.push(imgData);
                     this.curPage ++;
                     this.loading = false; // 解锁
-
                     return this.imgUrls
                 } else {
                     console.log('error')
