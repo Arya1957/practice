@@ -176,7 +176,7 @@
 
 /* 第四部分： 活动规则介绍 */
 .rules .intro-title {
-  top: 0.6rem;
+  top: 0.56rem;
 }
 
 .layout > .rules {
@@ -193,8 +193,8 @@
 .layout > .rules .logo {
   background: url("./images/logo.png") no-repeat;
   background-size: cover;
-  width: 1.3rem;
-  height: 0.46rem;
+  width: 1.6rem;
+  height: 0.5rem;
   margin: 0.7rem auto auto auto;
 }
 /*# sourceMappingURL=index.css.map */
