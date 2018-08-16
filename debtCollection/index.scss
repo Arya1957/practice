@@ -21,8 +21,10 @@ $test: #271e33;
   /* 这一步是为了防止文字过多，背景图片不够大时出现空白。
   即 有背景图片的地方会显示背景图片，没有背景图片的时候显示背景色 */
 }
+
 // 公共样式
 /* 汇崔简介和活动规则的样式一样，就放一起写了 */
+
 .introductions {
   .intro-title {
     font-weight: normal;
@@ -46,26 +48,33 @@ $test: #271e33;
   }
 }
 
-// 单独样式
+/* 公共样式到此结束，将公共样式放在前面主要是为了后面可以覆盖 */
+
+/* 单独样式  */
+
+/*  第一部分： 大图 */
+
 .layout>.first {
- // background: url('https://i.loli.net/2018/08/16/5b757f6e72de4.jpg') no-repeat;
- background: url('./images/main.jpg') no-repeat;
+  // background: url('https://i.loli.net/2018/08/16/5b757f6e72de4.jpg') no-repeat;
+  background: url('./images/main.jpg') no-repeat;
   background-size: cover;
   height: px2rem(1144);
 }
 
+/*第二部分： 介绍 */
+
 .layout>.intro {
   //background: url('https://i.loli.net/2018/08/16/5b757fc643462.png') no-repeat;
   padding: px2rem(110) px2rem(82) px2rem(72) px2rem(84);
- background: url('./images/1.png') no-repeat;
-  background-size: 100% 100%;
-  // height: px2rem(480);
+  background: url('./images/1.png') no-repeat;
+  background-size: 100% 100%; // height: px2rem(480);
   position: relative;
   .intro-title {
     top: px2rem(10);
   }
-  
 }
+
+/* 第三部分： 注册 */
 
 .layout>.registor {
   //background: url('https://i.loli.net/2018/08/16/5b757ff8a4974.png') no-repeat;
@@ -78,7 +87,7 @@ $test: #271e33;
     height: px2rem(80);
     line-height: px2rem(80);
   }
-  input {
+  input { 
     border: 1px solid $gold;
     border-radius: 5px;
     outline: none;
@@ -108,7 +117,7 @@ $test: #271e33;
       vertical-align: middle;
       justify-content: space-around;
       .refresh {
-       // background: url('https://i.loli.net/2018/08/16/5b758023f16e7.png') no-repeat;
+        // background: url('https://i.loli.net/2018/08/16/5b758023f16e7.png') no-repeat;
         background: url('./images/refresh.png') no-repeat;
         background-size: cover;
         height: px2rem(78);
@@ -138,8 +147,8 @@ $test: #271e33;
       text-align: center;
     }
     .redpacket {
-     // background: url('https://i.loli.net/2018/08/16/5b758054704bc.png') no-repeat;
-     background: url('./images/redPackets.png') no-repeat;
+      // background: url('https://i.loli.net/2018/08/16/5b758054704bc.png') no-repeat;
+      background: url('./images/redPackets.png') no-repeat;
       background-size: cover;
       position: absolute;
       right: px2rem(15);
@@ -150,7 +159,7 @@ $test: #271e33;
   }
 }
 
-/* 活动规则部分 */
+/* 第四部分： 活动规则介绍 */
 
 .rules {
   .intro-title {
@@ -160,23 +169,19 @@ $test: #271e33;
 
 .layout>.rules {
   position: relative;
-  padding: px2rem(140) px2rem(82) px2rem(98) px2rem(84);
- // background: url('https://i.loli.net/2018/08/16/5b758076037da.png') no-repeat;
-
+  padding: px2rem(140) px2rem(82) px2rem(98) px2rem(84); // background: url('https://i.loli.net/2018/08/16/5b758076037da.png') no-repeat;
   background: url('./images/3.png') no-repeat;
-  background-size: 100% 100%;
- // height: px2rem(948); // 直接写高度，会导致小屏手机下面的logo 显示不出来
+  background-size: 100% 100%; 
+  // height: px2rem(948); // 直接写高度，会导致小屏手机下面的logo 显示不出来
   .intro-detail {
-    list-style-position: inside;
-    // padding-top: px2rem(130);
+    list-style-position: inside; // padding-top: px2rem(130);
   }
   .logo {
-   // background: url('https://i.loli.net/2018/08/16/5b75809d3d721.png') no-repeat;
-   background: url('./images/logo.png') no-repeat;
+    // background: url('https://i.loli.net/2018/08/16/5b75809d3d721.png') no-repeat;
+    background: url('./images/logo.png') no-repeat;
     background-size: cover;
     width: px2rem(130);
     height: px2rem(46);
-    margin: px2rem(70) auto  auto auto;
+    margin: px2rem(70) auto auto auto;
   }
 }
-
