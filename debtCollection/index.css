@@ -10,6 +10,9 @@
   width: 100%;
   margin: 0 auto;
   font-size: 14px;
+  background: #2c1f3d;
+  /* 这一步是为了防止文字过多，背景图片不够大时出现空白。
+  即 有背景图片的地方会显示背景图片，没有背景图片的时候显示背景色 */
 }
 
 /* 汇崔简介和活动规则的样式一样，就放一起写了 */
@@ -32,7 +35,6 @@
 
 .introductions .intro-detail {
   color: #fffcff;
-  padding: 1.1rem 0.82rem 0 0.84rem;
   line-height: 1.5em;
   text-align: justify;
 }
@@ -44,9 +46,9 @@
 }
 
 .layout > .intro {
+  padding: 1.1rem 0.82rem 0.72rem 0.84rem;
   background: url("./images/1.png") no-repeat;
-  background-size: cover;
-  height: 4.8rem;
+  background-size: 100% 100%;
   position: relative;
 }
 
@@ -122,7 +124,7 @@
 
 .layout > .registor .validate span .refresh {
   background: url("./images/refresh.png") no-repeat;
-  background-size: c;
+  background-size: cover;
   height: 0.78rem;
   width: 0.78rem;
   font-style: normal;
@@ -169,19 +171,18 @@
 
 /* 活动规则部分 */
 .rules .intro-title {
-  top: 0.48rem;
+  top: 0.6rem;
 }
 
 .layout > .rules {
   position: relative;
+  padding: 1.4rem 0.82rem 0.98rem 0.84rem;
   background: url("./images/3.png") no-repeat;
-  background-size: cover;
-  height: 9.48rem;
+  background-size: 100% 100%;
 }
 
 .layout > .rules .intro-detail {
   list-style-position: inside;
-  padding-top: 1.3rem;
 }
 
 .layout > .rules .logo {
@@ -189,6 +190,6 @@
   background-size: cover;
   width: 1.3rem;
   height: 0.46rem;
-  margin: 0.7rem auto 0 auto;
+  margin: 0.7rem auto auto auto;
 }
 /*# sourceMappingURL=index.css.map */

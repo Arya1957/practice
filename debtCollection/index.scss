@@ -17,6 +17,9 @@ $test: #271e33;
   width: 100%;
   margin: 0 auto;
   font-size: 14px;
+  background: #2c1f3d;
+  /* 这一步是为了防止文字过多，背景图片不够大时出现空白。
+  即 有背景图片的地方会显示背景图片，没有背景图片的时候显示背景色 */
 }
 // 公共样式
 /* 汇崔简介和活动规则的样式一样，就放一起写了 */
@@ -38,7 +41,6 @@ $test: #271e33;
   }
   .intro-detail {
     color: $grey;
-    padding: px2rem(110) px2rem(82) 0 px2rem(84);
     line-height: 1.5em;
     text-align: justify;
   }
@@ -54,13 +56,15 @@ $test: #271e33;
 
 .layout>.intro {
   //background: url('https://i.loli.net/2018/08/16/5b757fc643462.png') no-repeat;
+  padding: px2rem(110) px2rem(82) px2rem(72) px2rem(84);
  background: url('./images/1.png') no-repeat;
-  background-size: cover;
-  height: px2rem(480);
+  background-size: 100% 100%;
+  // height: px2rem(480);
   position: relative;
   .intro-title {
     top: px2rem(10);
   }
+  
 }
 
 .layout>.registor {
@@ -150,29 +154,29 @@ $test: #271e33;
 
 .rules {
   .intro-title {
-    top: px2rem(48);
+    top: px2rem(60);
   }
 }
 
 .layout>.rules {
   position: relative;
+  padding: px2rem(140) px2rem(82) px2rem(98) px2rem(84);
  // background: url('https://i.loli.net/2018/08/16/5b758076037da.png') no-repeat;
 
- background: url('./images/3.png') no-repeat;
-  background-size: cover;
-  height: px2rem(948);
+  background: url('./images/3.png') no-repeat;
+  background-size: 100% 100%;
+ // height: px2rem(948); // 直接写高度，会导致小屏手机下面的logo 显示不出来
   .intro-detail {
     list-style-position: inside;
-    padding-top: px2rem(130);
+    // padding-top: px2rem(130);
   }
   .logo {
    // background: url('https://i.loli.net/2018/08/16/5b75809d3d721.png') no-repeat;
-
    background: url('./images/logo.png') no-repeat;
     background-size: cover;
     width: px2rem(130);
     height: px2rem(46);
-    margin: px2rem(70) auto  0 auto;
+    margin: px2rem(70) auto  auto auto;
   }
 }
 
