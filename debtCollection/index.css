@@ -1,0 +1,194 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.layout {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+/* 汇崔简介和活动规则的样式一样，就放一起写了 */
+.introductions .intro-title {
+  font-weight: normal;
+  color: #e7eebb;
+  font-size: 18px;
+  border: 1px solid #e7eebb;
+  width: 2.4rem;
+  height: 0.55rem;
+  line-height: 0.55rem;
+  border-radius: 50px;
+  background: #221b2d;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.introductions .intro-detail {
+  color: #fffcff;
+  padding: 1.1rem 0.82rem 0 0.84rem;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.layout > .first {
+  background: url("./images/main.jpg") no-repeat;
+  background-size: cover;
+  height: 11.44rem;
+}
+
+.layout > .intro {
+  background: url("./images/1.png") no-repeat;
+  background-size: cover;
+  height: 4.8rem;
+  position: relative;
+}
+
+.layout > .intro .intro-title {
+  top: 0.1rem;
+}
+
+.layout > .registor {
+  background: url("./images/2.png") no-repeat;
+  background-size: cover;
+  height: 6.64rem;
+  padding: 1.03rem 0.94rem 0.86rem 0.87rem;
+}
+
+.layout > .registor > div {
+  margin-bottom: 0.34rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+
+.layout > .registor input {
+  border: 1px solid #e7eebb;
+  border-radius: 5px;
+  outline: none;
+  height: 100%;
+  width: calc(100% - 124px);
+  padding-left: 16px;
+  background: #221b2d;
+}
+
+.layout > .registor input::-webkit-input-placeholder {
+  color: #e7eebb;
+}
+
+.layout > .registor input:-ms-input-placeholder {
+  color: #e7eebb;
+}
+
+.layout > .registor input::-ms-input-placeholder {
+  color: #e7eebb;
+}
+
+.layout > .registor input::placeholder {
+  color: #e7eebb;
+}
+
+.layout > .registor .phone input {
+  width: 100%;
+}
+
+.layout > .registor .validate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.layout > .registor .validate span {
+  width: 112px;
+  font-size: 12px;
+  margin-left: 8px;
+  background: #fff;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.layout > .registor .validate span .refresh {
+  background: url("./images/refresh.png") no-repeat;
+  background-size: c;
+  height: 0.78rem;
+  width: 0.78rem;
+  font-style: normal;
+}
+
+.layout > .registor .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.layout > .registor .message span {
+  width: 112px;
+  font-size: 12px;
+  margin-left: 8px;
+  background: #ffd634;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.layout > .registor .sign-up {
+  position: relative;
+  margin-top: 0.75rem;
+}
+
+.layout > .registor .sign-up p {
+  background: #ffd634;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.layout > .registor .sign-up .redpacket {
+  background: url("./images/redPackets.png") no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0.15rem;
+  bottom: 0.24rem;
+  width: 1.11rem;
+  height: 1.11rem;
+}
+
+/* 活动规则部分 */
+.rules .intro-title {
+  top: 0.48rem;
+}
+
+.layout > .rules {
+  position: relative;
+  background: url("./images/3.png") no-repeat;
+  background-size: cover;
+  height: 9.48rem;
+}
+
+.layout > .rules .intro-detail {
+  list-style-position: inside;
+  padding-top: 1.3rem;
+}
+
+.layout > .rules .logo {
+  background: url("./images/logo.png") no-repeat;
+  background-size: cover;
+  width: 1.3rem;
+  height: 0.46rem;
+  margin: 0.7rem auto 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
