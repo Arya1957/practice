@@ -22,6 +22,7 @@ function handler(e) {
   while(target !== result){
     if(target.tagName.toLowerCase() === 'li'){
        console.log(target.innerText);
+       break;
     } 
     target = target.parentNode;    
   }
